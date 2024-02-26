@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include inventeam_mitosis *.css
+recursive-include inventeam_mitosis *.csv
+recursive-include inventeam_mitosis *.html
+recursive-include inventeam_mitosis *.ico
+recursive-include inventeam_mitosis *.js
+recursive-include inventeam_mitosis *.json
+recursive-include inventeam_mitosis *.md
+recursive-include inventeam_mitosis *.png
+recursive-include inventeam_mitosis *.py
+recursive-include inventeam_mitosis *.svg
+recursive-include inventeam_mitosis *.txt
+recursive-exclude inventeam_mitosis *.pyc
