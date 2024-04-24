@@ -16,14 +16,14 @@ function fetchBalance(frm) {
                 if (response.message !== null && response.message !== undefined) {
                     var balance = response.message;
                     var formatted_balance = formatSupplierBalance(balance);
-                    frm.set_value('balance', formatted_balance);
-                    refresh_field('balance');
+                    frm.set_value('customer_balance', formatted_balance);
+                    refresh_field('customer_balance');
                 }
             }
         });
     } else {
-        frm.set_value('balance', '');
-        refresh_field('balance');
+        frm.set_value('customer_balance', '');
+        refresh_field('customer_balance');
     }
 }
 
