@@ -14,8 +14,8 @@ function fetchBalance(frm) {
             },
             callback: function(response) {
                 if (response.message !== null && response.message !== undefined) {
-                    var balance = response.message;
-                    var formatted_balance = formatSupplierBalance(balance);
+                    var customer_balance = response.message;
+                    var formatted_balance = formatCustomerBalance(customer_balance);
                     frm.set_value('customer_balance', formatted_balance);
                     refresh_field('customer_balance');
                 }
@@ -27,6 +27,7 @@ function fetchBalance(frm) {
     }
 }
 
-function formatSupplierBalance(balance) {
-    return balance >= 0 ? balance + ' DR' : balance + ' CR';
+function formatCustomerBalance(customer_balance) {
+    var formatted_balance = customer_balance.toLocaleString('en-US');
+    return customer_balance >= 0 ? formatted_balance + ' DR' : formatted_balance + ' CR';
 }

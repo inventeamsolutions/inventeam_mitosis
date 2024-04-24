@@ -28,5 +28,6 @@ function fetchSupplierBalance(frm) {
 }
 
 function formatSupplierBalance(supplier_balance) {
-    return supplier_balance >= 0 ? supplier_balance + ' DR' : supplier_balance + ' CR';
+    var formatted_balance = supplier_balance.toLocaleString('en-US');
+    return supplier_balance >= 0 ? formatted_balance + ' DR' : formatted_balance + ' CR';
 }
